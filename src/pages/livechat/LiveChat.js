@@ -6,11 +6,11 @@ import GroupDetail from "./GroupDetail";
 
 function LiveChat() {
   return (
-    <div class="flex bg-stone-600">
+    <div class="flex bg-gray-100">
       <LeftBar />
       {/* <!-- massage section --> */}
       <div
-        class="image hidden w-4/6 lg:flex flex-col justify-start items-stretch border-gray-100  m-2 rounded-2xl shadow-lg"
+        class="image hidden w-4/6 lg:flex flex-col justify-start items-stretch h-screen  border-4 border-gray-100 rounded-2xl shadow-lg"
       >
         {/* <!-- Header with name --> */}
         <ChatHeader />

@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function AddPost() {
     return (
-        <aside>
+        <aside className='h-full'>
             <div class="flex">
                 <div class="flex-1 mx-2">
                     <h2 class="px-4 py-2 text-xl font-semibold text-white">Home</h2>

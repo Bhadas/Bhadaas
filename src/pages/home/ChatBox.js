@@ -5,7 +5,7 @@ import ChatInput from "../../Component/ChatInput";
 export default function ChatBox() {
   return (
     // <div className="flex">
-    <div class="w-3/6  bg-white sm:w-4/6  lg:flex flex-col justify-start items-stretch border-r-2 border-gray-100 lg:rounded-r-md m-2 rounded-2xl shadow-lg">
+    <div class="w-3/6  bg-white sm:w-4/6 h-screen lg:flex flex-col justify-start items-stretch border-4 border-gray-100 lg:rounded-r-md  rounded-2xl shadow-lg">
       <ChatHeader />
       {/* <!-- Messages --> */}
       <div class="flex-auto flex flex-col justify-between overflow-y-auto">

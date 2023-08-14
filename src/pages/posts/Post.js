@@ -5,9 +5,9 @@ import AddPost from "./AddPost";
 
 const Post = () => {
   return (
-    <div class="flex bg-stone-600">
+    <div class="flex bg-gray-100">
       <LeftBar />
-      <div class="hidden w-4/6 bg-slate-900 lg:flex flex-col justify-start items-stretch border-gray-100  m-2 rounded-2xl shadow-lg">
+      <div class="hidden w-4/6 bg-slate-900 lg:flex flex-col justify-start items-stretch border-gray-100 border-4 rounded-2xl shadow-lg">
         <main role="main">
           <section>
             <AddPost/>

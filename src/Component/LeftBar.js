@@ -2,7 +2,7 @@ import React from "react";
 
 export default function LeftBar() {
   return (
-    <div class="top-0 left-0 h-screen w-2/12 flex flex-col m-2 rounded-xl shadow-lg text-white bg-gray-900">
+    <div class="top-0 left-0 h-screen w-2/12 flex flex-col border-4 border-gray-100 rounded-xl shadow-lg text-white bg-gray-900">
       <i class="relative flex items-center justify-center h-10 w-10 mt-8 mb-2 mx-auto text-white-500 hover:bg-green-600 bg-blue-500 rounded-xl shadow-2xl hover:text-white hover:rounded-xl transition-all duration-30 ease-linear;">
         BD
       </i>
