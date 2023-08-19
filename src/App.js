@@ -5,6 +5,7 @@ import LiveChat from "./pages/livechat/LiveChat";
 import LeftMenu from "./pages/home/UserList";
 import ChatBox from "./pages/home/ChatBox";
 import Post from "./pages/posts/Post";
+import SingleChat from "./pages/SingleChat/Home"
 import {BrowserRouter, Route,Routes } from "react-router-dom";
 
 function App() {
@@ -13,8 +14,10 @@ function App() {
     <BrowserRouter>
 
     <Routes>
-      <Route path="/" element={<Home/>}/>
-      <Route path="/chat" element={<LiveChat/>}/>
+      <Route path="/" element={<LiveChat/>}/>
+      <Route path="/chat" element={<SingleChat/>}/>
+      <Route path="/playground" element={<Home/>}/>
+      <Route path="/groupchat" element={<Home/>}/>
       <Route path="/post" element={<Post/>}/>
     </Routes>
   </BrowserRouter>
