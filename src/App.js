@@ -10,6 +10,7 @@ import {BrowserRouter, Route,Routes } from "react-router-dom";
 import Login from "./pages/authantication/Login";
 import SignUp from "./pages/authantication/SignUp";
 import Test from "./Component/Test";
+import Profile from "./pages/Profile/Profile";
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
       <Route path="/login" element={<Login/>}/>
       <Route path="/signup" element={<SignUp/>}/>
       <Route path="/test" element={<Test/>}/>
+      <Route path="/Profile" element={<Profile/>}/>
     </Routes>
   </BrowserRouter>
 

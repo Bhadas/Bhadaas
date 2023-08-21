@@ -30,7 +30,7 @@ export default function AddPost() {
                             alt="" />
                     </div>
                     <div class="flex-1 px-2 pt-2 mt-2">
-                        <textarea class=" bg-transparent text-gray-400 font-medium text-lg w-full" rows="2"
+                        <textarea class=" bg-transparent caret-red-500 focus:caret-red-500 font-medium text-lg w-full" rows="2"
                             cols="50" placeholder="What's happening?"></textarea>
                     </div>
                 </div>
@@ -99,7 +99,7 @@ export default function AddPost() {
                     <div class="flex-1">
                         <button
                             class="bg-blue-400 hover:bg-blue-500 mt-5 text-white font-bold py-2 px-8 rounded-full mr-8 float-right">
-                            Tweet
+                            Post
                         </button>
                     </div>
                 </div>
