@@ -1,11 +1,13 @@
 import React from 'react'
 
+
 export default function leftAppBar() {
+    
   return (
     <div class="top-0 left-0 w-1/12 flex flex-col h-screen  border-4 border-gray-100 rounded-xl shadow-lg text-white bg-gray-900">
     <a
       href="/"
-      class="relative flex items-center justify-center h-10 w-10 mt-8 mb-2 mx-auto text-white-500 hover:bg-green-600 bg-blue-500 rounded-xl shadow-2xl hover:text-white hover:rounded-xl transition-all duration-30 ease-linear;"
+      class="relative flex items-center justify-center h-10 w-10 mt-8 mb-2 mx-auto text-white-500  hover:bg-red-700 rounded-xl shadow-2xl hover:text-white hover:rounded-xl transition-all duration-30 ease-linear;"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +30,7 @@ export default function leftAppBar() {
       </svg>
     </a>
     <a
-      href="/chat" class="relative flex items-center justify-center h-10 w-10 mt-8 mb-2 mx-auto text-white-500 hover:bg-green-600 bg-blue-500 rounded-xl shadow-2xl hover:text-white hover:rounded-xl transition-all duration-30 ease-linear;">
+      href="/chat" class="relative flex items-center justify-center h-10 w-10 mt-8 mb-2 mx-auto text-white-500 hover:bg-red-700 bg-black-500 rounded-xl shadow-2xl hover:text-white hover:rounded-xl transition-all duration-30 ease-linear;">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -45,7 +47,7 @@ export default function leftAppBar() {
       </svg>
     </a>
     <a
-      href="/groupchat" class="relative flex items-center justify-center h-10 w-10 mt-8 mb-2 mx-auto text-white-500 hover:bg-green-600 bg-blue-500 rounded-xl shadow-2xl hover:text-white hover:rounded-xl transition-all duration-30 ease-linear;">
+      href="/groupchat" class="relative flex items-center justify-center h-10 w-10 mt-8 mb-2 mx-auto text-white-500  hover:bg-red-700 rounded-xl shadow-2xl hover:text-white hover:rounded-xl transition-all duration-30 ease-linear;">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -64,7 +66,7 @@ export default function leftAppBar() {
 
     <a
       href="/post"
-      class="relative flex items-center justify-center h-10 w-10 mt-8 mb-2 mx-auto text-white-500 hover:bg-green-600 bg-blue-500 rounded-xl shadow-2xl hover:text-white hover:rounded-xl transition-all duration-30 ease-linear;"
+      class="relative flex items-center justify-center h-10 w-10 mt-8 mb-2 mx-auto text-white-500  hover:bg-red-700 rounded-xl shadow-2xl hover:text-white hover:rounded-xl transition-all duration-30 ease-linear;"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +84,7 @@ export default function leftAppBar() {
       </svg>
     </a>
     <a
-      href="#" class="relative flex items-center justify-center h-10 w-10 mt-8 mb-2 mx-auto text-white-500 hover:bg-green-600 bg-blue-500 rounded-xl shadow-2xl hover:text-white hover:rounded-xl transition-all duration-30 ease-linear;">
+      href="#" class="relative flex items-center justify-center h-10 w-10 mt-8 mb-2 mx-auto text-white-500  hover:bg-red-700 rounded-xl shadow-2xl hover:text-white hover:rounded-xl transition-all duration-30 ease-linear;">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

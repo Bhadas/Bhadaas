@@ -19,7 +19,7 @@ export default function ChatHeader() {
       <div class="flex flex-row">
         <button
           type="button"
-          class="p-2 ml-2 text-gray-400 rounded-full hover:text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring"
+          class="p-2 ml-2 text-red-400 rounded-full hover:text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring"
           aria-label="Search"
         >
           <svg class="w-6 h-6 fill-current" viewBox="0 0 20 20">
@@ -28,7 +28,7 @@ export default function ChatHeader() {
         </button>
         <button
           type="button"
-          class="p-2 ml-2 text-gray-400 xl:text-blue-500 rounded-full hover:text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring"
+          class="p-2 ml-2 text-red-400 xl:text-red-700 rounded-full hover:text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring"
           aria-label="Open"
         >
           <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
@@ -42,7 +42,7 @@ export default function ChatHeader() {
         </button>
         <button
           type="button"
-          class="p-2 ml-2 text-gray-400 rounded-full hover:text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring"
+          class="p-2 ml-2 text-red-400 rounded-full hover:text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring"
           aria-label="More"
         >
           <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">

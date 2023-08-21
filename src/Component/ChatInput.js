@@ -6,7 +6,7 @@ export default function ChatInput() {
         <div class="">
           <button
             type="button"
-            class="p-2 text-gray-400 rounded-full hover:text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring"
+            class="p-2 text-red-400 rounded-full hover:text-red-600 hover:bg-gray-100 focus:outline-none focus:ring"
             aria-label="Upload a files"
           >
             <svg class="fill-current h-6 w-6" viewBox="0 0 20 20">
@@ -24,7 +24,7 @@ export default function ChatInput() {
         <div class="flex flex-row">
           <button
             type="button"
-            class="p-2 text-gray-400 rounded-full hover:text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring"
+            class="p-2 text-red-400 rounded-full hover:text-red-600 hover:bg-gray-100 focus:outline-none focus:ring"
             aria-label="Show emojis"
           >
             <svg class="fill-current h-6 w-6" viewBox="0 0 16 16">
@@ -34,7 +34,7 @@ export default function ChatInput() {
           </button>
           <button
             type="button"
-            class="p-2 ml-2 text-gray-400 rounded-full hover:text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring"
+            class="p-2 ml-2 text-red-400 rounded-full hover:text-red-600 hover:bg-gray-100 focus:outline-none focus:ring"
             aria-label="Record a voice"
           >
             <svg class="fill-current h-6 w-6" viewBox="0 0 20 20">

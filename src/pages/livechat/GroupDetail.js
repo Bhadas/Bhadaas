@@ -4,7 +4,7 @@ export default function GroupDetail() {
   return (
     // <!-- right menu  start -->
 
-    <div class="hidden  xl:block bg-white  p-5 overflow-y-auto h-screen  border-4 border-gray-100 rounded-xl shadow-lg">
+    <div class="hidden w-2/12 xl:block bg-white  p-5 overflow-y-auto h-screen  border-4 border-gray-100 rounded-xl shadow-lg">
         <main>
             <div class="flex flex-row justify-center items-center mx-4">
                 <img src="https://cdn.pixabay.com/photo/2021/08/24/16/34/broken-heart-6571108_640.png"

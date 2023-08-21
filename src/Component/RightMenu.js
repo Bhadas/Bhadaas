@@ -1,6 +1,7 @@
 import React from 'react'
 
 export default function RightMenu() {
+    
   return (
       <div class="hidden h-screen  xl:block bg-white rounded-  md p-5 overflow-y-auto border-4 border-gray-100 rounded-xl shadow-lg">
         <main>

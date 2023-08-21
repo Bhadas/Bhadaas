@@ -7,8 +7,14 @@ import ChatBox from "./pages/home/ChatBox";
 import Post from "./pages/posts/Post";
 import SingleChat from "./pages/SingleChat/Home"
 import {BrowserRouter, Route,Routes } from "react-router-dom";
+import Login from "./pages/authantication/Login";
+import SignUp from "./pages/authantication/SignUp";
+import Test from "./Component/Test";
 
 function App() {
+
+
+
   return (
     <>
     <BrowserRouter>
@@ -19,6 +25,9 @@ function App() {
       <Route path="/playground" element={<Home/>}/>
       <Route path="/groupchat" element={<Home/>}/>
       <Route path="/post" element={<Post/>}/>
+      <Route path="/login" element={<Login/>}/>
+      <Route path="/signup" element={<SignUp/>}/>
+      <Route path="/test" element={<Test/>}/>
     </Routes>
   </BrowserRouter>
 
