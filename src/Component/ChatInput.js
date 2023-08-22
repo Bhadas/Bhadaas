@@ -1,7 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
+import EmojiDrawer from "./EmojiDrawer";
 
 export default function ChatInput() {
+   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+   const handleDrawerOpen = () => {
+     setIsDrawerOpen(!isDrawerOpen); // Toggle the state
+   };
+    console.log("Emoji button clicked",isDrawerOpen);
   return (
+    <div>
+        {isDrawerOpen && (
+          <EmojiDrawer
+            isOpen={isDrawerOpen}
+            onClose={() => setIsDrawerOpen(false)}
+          />
+        )}
       <div class="flex flex-row justify-between items-center p-3">
         <div class="">
           <button
@@ -23,8 +37,9 @@ export default function ChatInput() {
         </div>
         <div class="flex flex-row">
           <button
+            onClick={handleDrawerOpen}
             type="button"
-            class="p-2 text-red-400 rounded-full hover:text-red-600 hover:bg-gray-100 focus:outline-none focus:ring"
+            className="p-2 text-red-400 rounded-full hover:text-red-600 hover:bg-gray-100 focus:outline-none focus:ring"
             aria-label="Show emojis"
           >
             <svg class="fill-current h-6 w-6" viewBox="0 0 16 16">
@@ -32,6 +47,7 @@ export default function ChatInput() {
               <path d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z" />
             </svg>
           </button>
+
           <button
             type="button"
             class="p-2 ml-2 text-red-400 rounded-full hover:text-red-600 hover:bg-gray-100 focus:outline-none focus:ring"
@@ -43,6 +59,7 @@ export default function ChatInput() {
           </button>
         </div>
       </div>
+    </div>
   );
 }
 
