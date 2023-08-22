@@ -22,7 +22,7 @@ function LiveChat() {
             />
           </svg>
         </div>
-        <BgAnimation style={{zIndex: -100, innerWidth: 60}}/>
+        <BgAnimation />
         {/* <!-- Messages --> */}
         <div class="flex-auto flex flex-row justify-between overflow-y-auto z-1 ">
           <div class="m-4 flex ">

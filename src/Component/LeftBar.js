@@ -1,12 +1,16 @@
 import React from "react";
-import BhadaasLogo from "../Image/BhadaasLogo.svg"
+
 
 export default function LeftBar() {
   return (
     <div class="top-0 left-0 h-screen w-2/12 flex flex-col border-4 border-gray-100 rounded-xl shadow-lg text-white bg-gray-900">
-      <i class="relative flex items-center justify-center mt-8 mb-2 mx-auto text-white-500 hover:bg-green-600 bg-blue-500 rounded-xl shadow-2xl hover:text-white hover:rounded-xl transition-all duration-30 ease-linear;">
+      <i class="relative flex items-center justify-center mt-8 mb-2 mx-auto text-white-500 rounded-xl shadow-2xl hover:text-white hover:rounded-xl transition-all duration-30 ease-linear;">
       {/* <BhadaasLogo/> */}
-      <img src = "../Image/Bhadas1.png" />
+      <img
+                          class=""
+                          src={require('../Image/Bhadas1.png')}
+                          alt=""
+                        />
       </i>
 
       <a href="/" class="flex flex-row items-center p-4 m-2  hover:bg-red-900 hover:rounded-2xl  ">
