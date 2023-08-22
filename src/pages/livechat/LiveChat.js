@@ -1,20 +1,44 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import LeftBar from "../../Component/LeftBar";
 import ChatHeader from "../../Component/ChatHeader";
 import ChatInput from "../../Component/ChatInput";
 import GroupDetail from "./GroupDetail";
-import BgAnimation from "./BgAnimation"
+import BgAnimation from "./BgAnimation";
+  import Cookies from "js-cookie";
+import { Navigate, useNavigate } from "react-router-dom";
+
 
 function LiveChat() {
+  const token = Cookies.get("token");
+  console.log("token",token);
+  const [isLoggedIn, setIsLoggedIn] = useState(!!Cookies.get("token"));
+  const navigate= useNavigate()
+  useEffect(()=>{
+    if(isLoggedIn){
+      
+    }else{
+      navigate("/login")
+    }
+  },[])
+
+
   return (
     <div class="flex bg-blue-950">
       <LeftBar />
       {/* <!-- massage section --> */}
+<<<<<<< HEAD
       <div 
         class="  hidden  w-4/6 lg:flex flex-col justify-start items-stretch h-screen  border-4 border-gray-100 rounded-2xl shadow-lg"
       >
+=======
+
+      <div class="  hidden  w-4/6 lg:flex flex-col justify-start items-stretch h-screen  border-4 border-gray-100 rounded-2xl shadow-lg">
+>>>>>>> 35f0e49ed67b1d8495b1de5bb3ca4dc32345d559
         <div className="flex justify-end m-4">
-        <svg class="w-6 h-6 fill-current bg-red-500 rounded-xl " viewBox="0 0 24 24">
+          <svg
+            class="w-6 h-6 fill-current bg-red-500 rounded-xl "
+            viewBox="0 0 24 24"
+          >
             <path
               fill-rule="nonzero"
               d="M12,16 C13.1045695,16 14,16.8954305 14,18 C14,19.1045695 13.1045695,20 12,20 C10.8954305,20 10,19.1045695 10,18 C10,16.8954305 10.8954305,16 12,16 Z M12,10 C13.1045695,10 14,10.8954305 14,12 C14,13.1045695 13.1045695,14 12,14 C10.8954305,14 10,13.1045695 10,12 C10,10.8954305 10.8954305,10 12,10 Z M12,4 C13.1045695,4 14,4.8954305 14,6 C14,7.1045695 13.1045695,8 12,8 C10.8954305,8 10,7.1045695 10,6 C10,4.8954305 10.8954305,4 12,4 Z"
@@ -146,7 +170,7 @@ function LiveChat() {
           </div>
         </div>
         {/* <!-- Input for writing a messages --> */}
-        <ChatInput style={{zIndex: 1}} />
+        <ChatInput style={{ zIndex: 1 }} />
       </div>
       {/* <!-- massage section end --> */}
       {/* <!-- right menu  start --> */}
