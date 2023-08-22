@@ -4,7 +4,7 @@ import React from 'react'
 export default function leftAppBar() {
     
   return (
-    <div class="top-0 left-0 w-1/12 flex flex-col h-screen justify-between mb-3  border-4 border-gray-100 rounded-xl shadow-lg text-white bg-gray-900">
+    <div class="top-0 left-0 w-1/12 flex flex-col h-screen justify-between  border-4 border-gray-100 rounded-xl shadow-lg text-white bg-blue-950">
 
   
     <div >

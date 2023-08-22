@@ -10,7 +10,7 @@ const Profile = () => {
 
         <div class="flex overflow-visible h-screen bg-gray-100">
         <LeftBar />
-        <div class="hidden w-4/6 overflow-y-scroll bg-slate-900 lg:flex flex-col justify-start items-stretch border-gray-100 border-4 rounded-2xl shadow-lg">
+        <div class="hidden w-4/6 overflow-y-scroll  lg:flex flex-col justify-start items-stretch border-gray-100 border-4 rounded-2xl shadow-lg">
           {/* <main role="main">
             <section> */}
             <ProfileSection />

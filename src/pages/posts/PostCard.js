@@ -2,7 +2,7 @@ import React from 'react'
 
 const PostCard = () => {
   return (
-    <article class="hover:bg-gray-800 transition duration-350 ease-in-out">
+    <article class="hover:bg-gray-100 transition duration-350 ease-in-out">
     <div class="flex flex-shrink-0 p-4 pb-0">
       <a href="#" class="flex-shrink-0 group block">
         <div class="flex items-center">
@@ -14,9 +14,9 @@ const PostCard = () => {
             />
           </div>
           <div class="ml-3">
-            <p class="text-base leading-6 font-medium text-white">
+            <p class="text-base leading-6 font-medium text-black">
               Sonali Hirave
-              <span class="text-sm leading-5 font-medium text-gray-400 group-hover:text-gray-300 transition ease-in-out duration-150">
+              <span class="text-sm leading-5 font-medium  group-hover:text-gray-300 transition ease-in-out duration-150">
                 @ShonaDesign . 16 April
               </span>
             </p>
@@ -26,19 +26,19 @@ const PostCard = () => {
     </div>
 
     <div class="pl-16">
-      <p class="text-base width-auto font-medium text-white flex-shrink">
+      <p class="text-base width-auto font-medium text-black flex-shrink">
         Day 07 of the challenge{" "}
-        <a href="#" class="text-blue-400">
+        <a href="#" class="text-red-400">
           #100DaysOfCode
         </a>
         I was wondering what I can do with{" "}
-        <a href="#" class="text-blue-400">
+        <a href="#" class="text-red-400">
           #tailwindcss
         </a>
         , so just started building Twitter UI using Tailwind and
         so far it looks so promising. I will post my code after
         completion. [07/100]
-        <a href="#" class="text-blue-400">
+        <a href="#" class="text-red-400">
           {" "}
           #WomenWhoCode #CodeNewbie
         </a>
@@ -46,7 +46,7 @@ const PostCard = () => {
 
 
       <div class="flex items-center py-4">
-        <div class="flex-1 flex items-center text-white text-xs text-gray-400 hover:text-blue-400 transition duration-350 ease-in-out">
+        <div class="flex-1 flex items-center text-black text-xs  hover:text-red-400 transition duration-350 ease-in-out">
           <svg
             viewBox="0 0 24 24"
             fill="currentColor"
@@ -58,7 +58,7 @@ const PostCard = () => {
           </svg>
           12.3 k
         </div>
-        <div class="flex-1 flex items-center text-white text-xs text-gray-400 hover:text-green-400 transition duration-350 ease-in-out">
+        <div class="flex-1 flex items-center text-black text-xs  hover:text-green-400 transition duration-350 ease-in-out">
           <svg
             viewBox="0 0 24 24"
             fill="currentColor"
@@ -70,7 +70,7 @@ const PostCard = () => {
           </svg>
           14 k
         </div>
-        <div class="flex-1 flex items-center text-white text-xs text-gray-400 hover:text-red-600 transition duration-350 ease-in-out">
+        <div class="flex-1 flex items-center text-black text-xs  hover:text-red-600 transition duration-350 ease-in-out">
           <svg
             viewBox="0 0 24 24"
             fill="currentColor"
@@ -82,7 +82,7 @@ const PostCard = () => {
           </svg>
           14 k
         </div>
-        <div class="flex-1 flex items-center text-white text-xs text-gray-400 hover:text-blue-400 transition duration-350 ease-in-out">
+        <div class="flex-1 flex items-center text-black text-xs  hover:text-red-400 transition duration-350 ease-in-out">
           <svg
             viewBox="0 0 24 24"
             fill="currentColor"
@@ -96,7 +96,7 @@ const PostCard = () => {
         </div>
       </div>
     </div>
-    <hr class="border-gray-800" />
+    <hr class="border-gray-300 m-4" />
   </article>
   )
 }

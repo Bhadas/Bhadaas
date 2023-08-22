@@ -10,7 +10,6 @@ function LiveChat() {
     <div class="flex bg-blue-950">
       <LeftBar />
       {/* <!-- massage section --> */}
-      
       <div 
         class="  hidden  w-4/6 lg:flex flex-col justify-start items-stretch h-screen  border-4 border-gray-100 rounded-2xl shadow-lg"
       >
@@ -36,8 +35,8 @@ function LiveChat() {
                   />
                 </div>
                 <div class="flex flex-col justify-center">
-                  <h2 class="text-sm font-bold">Jose Waldow</h2>
-                  <p class="text-xs text-blue-600 font-normal">Online</p>
+                  <h2 class="text-sm font-bold text-white">Jose Waldow</h2>
+                  <p class="text-xs text-red-400 font-normal">Online</p>
                 </div>
               </li>
               <li class="flex flex-row my-3">
@@ -49,8 +48,8 @@ function LiveChat() {
                   />
                 </div>
                 <div class="flex flex-col justify-center">
-                  <h2 class="text-sm font-bold">Sherwood Rosol</h2>
-                  <p class="text-xs text-blue-600 font-normal">Online</p>
+                  <h2 class="text-sm font-bold text-white">Sherwood Rosol</h2>
+                  <p class="text-xs text-red-400 font-normal">Online</p>
                 </div>
               </li>
               <li class="flex flex-row my-3">
@@ -62,7 +61,7 @@ function LiveChat() {
                   />
                 </div>
                 <div class="flex flex-col justify-center">
-                  <h2 class="text-sm font-bold">Leena Hannan</h2>
+                  <h2 class="text-sm font-bold text-white">Leena Hannan</h2>
                   <p class="text-xs text-gray-400 font-normal">
                     last seen 40 minutes ago
                   </p>
@@ -77,7 +76,7 @@ function LiveChat() {
                   />
                 </div>
                 <div class="flex flex-col justify-center">
-                  <h2 class="text-sm font-bold">Yaeko Lindblom</h2>
+                  <h2 class="text-sm font-bold text-white">Yaeko Lindblom</h2>
                   <p class="text-xs text-gray-400 font-normal">
                     last seen 40 minutes ago
                   </p>
@@ -96,8 +95,8 @@ function LiveChat() {
                   />
                 </div>
                 <div class="flex flex-col justify-center">
-                  <h2 class="text-sm font-bold">Sherwood Rosol</h2>
-                  <p class="text-xs text-blue-600 font-normal">Online</p>
+                  <h2 class="text-sm font-bold text-white">Sherwood Rosol</h2>
+                  <p class="text-xs text-red-400 font-normal">Online</p>
                 </div>
               </li>
               <li class="flex flex-row my-3">
@@ -109,8 +108,8 @@ function LiveChat() {
                   />
                 </div>
                 <div class="flex flex-col justify-center">
-                  <h2 class="text-sm font-bold">Sherwood Rosol</h2>
-                  <p class="text-xs text-blue-600 font-normal">Online</p>
+                  <h2 class="text-sm font-bold text-white">Sherwood Rosol</h2>
+                  <p class="text-xs text-red-400 font-normal">Online</p>
                 </div>
               </li>
               <li class="flex flex-row my-3">
@@ -122,7 +121,7 @@ function LiveChat() {
                   />
                 </div>
                 <div class="flex flex-col justify-center">
-                  <h2 class="text-sm font-bold">Leena Hannan</h2>
+                  <h2 class="text-sm font-bold text-white">Leena Hannan</h2>
                   <p class="text-xs text-gray-400 font-normal">
                     last seen 40 minutes ago
                   </p>
@@ -137,7 +136,7 @@ function LiveChat() {
                   />
                 </div>
                 <div class="flex flex-col justify-center">
-                  <h2 class="text-sm font-bold">Yaeko Lindblom</h2>
+                  <h2 class="text-sm font-bold text-white">Yaeko Lindblom</h2>
                   <p class="text-xs text-gray-400 font-normal">
                     last seen 40 minutes ago
                   </p>

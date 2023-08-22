@@ -3,7 +3,7 @@ import React from "react";
 export default function UserList() {
   return (
     // <div className="flex">
-      <div class="md:block h-screen hidden w-1/6 flex-col overflow-y-auto left-2 border-4 border-gray-100 rounded-xl shadow-lg bg-white">
+      <div class="md:block h-screen hidden  w-1/6 flex-col overflow-y-auto left-2 border-4 border-gray-100 rounded-xl shadow-lg bg-white">
         {/* <!-- search compt --> */}
         <div class="py-4 px-2">
           <input

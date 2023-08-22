@@ -6,7 +6,7 @@ import ChatInput from "../../Component/ChatInput";
 export default function ChatBox() {
   return (
     // <div className="flex">
-    <div class="w-3/6  bg-white sm:w-4/6 h-screen lg:flex flex-col justify-start items-stretch border-4 border-gray-100 lg:rounded-r-md  rounded-2xl shadow-lg">
+    <div class="w-7/12  bg-white sm:w-7/12 h-screen lg:flex flex-col justify-start items-stretch border-4 border-gray-100 lg:rounded-r-md  rounded-2xl shadow-lg">
       <ChatHeader />
       {/* <!-- Messages --> */}
       <div class="flex-auto flex flex-col justify-between overflow-y-auto">
@@ -23,7 +23,7 @@ export default function ChatBox() {
             </div>
             <div class="w-11/12 p-2">
               <div class="bg-gray-50 p-3 rounded-xl mb-2 relative">
-                <h2 class="text-sm font-semibold mb-2">Yaeko Lindblom</h2>
+                <h2 class="text-sm font-semibold mb-2 text-red-400">Yaeko Lindblom</h2>
                 <p class="text-sm">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry.
@@ -34,7 +34,7 @@ export default function ChatBox() {
               </div>
       
                     <div class="bg-gray-50 p-3 rounded-xl mt-2 relative">
-                <h2 class="font-semibold mb-2 text-sm">Yaeko Lindblom</h2>
+                <h2 class="font-semibold mb-2 text-sm text-red-400">Yaeko Lindblom</h2>
                 <p class="text-sm">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
@@ -85,7 +85,7 @@ export default function ChatBox() {
             </div>
             <div class="w-11/12 p-2">
               <div class="bg-gray-50 p-3 rounded-xl mb-2 relative">
-                <h2 class="text-sm font-semibold mb-2">Yaeko Lindblom</h2>
+                <h2 class="text-sm font-semibold mb-2 text-red-400">Yaeko Lindblom</h2>
                 <p class="text-sm">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry.
@@ -96,7 +96,7 @@ export default function ChatBox() {
               </div>
       
                     <div class="bg-gray-50 p-3 rounded-xl mt-2 relative">
-                <h2 class="font-semibold mb-2 text-sm">Yaeko Lindblom</h2>
+                <h2 class="font-semibold mb-2 text-sm text-red-400">Yaeko Lindblom</h2>
                 <p class="text-sm">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
@@ -142,7 +142,7 @@ export default function ChatBox() {
             </div>
             <div class="w-11/12 p-2">
               <div class="bg-gray-50 p-3 rounded-xl mb-2 relative">
-                <h2 class="text-sm font-semibold mb-2">Yaeko Lindblom</h2>
+                <h2 class="text-sm font-semibold mb-2 text-red-400">Yaeko Lindblom</h2>
                 <p class="text-sm">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry.
@@ -153,7 +153,7 @@ export default function ChatBox() {
               </div>
       
                     <div class="bg-gray-50 p-3 rounded-xl mt-2 relative">
-                <h2 class="font-semibold mb-2 text-sm">Yaeko Lindblom</h2>
+                <h2 class="font-semibold mb-2 text-sm text-red-400">Yaeko Lindblom</h2>
                 <p class="text-sm">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
