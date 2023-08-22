@@ -4,10 +4,13 @@ import React from 'react'
 export default function leftAppBar() {
     
   return (
-    <div class="top-0 left-0 w-1/12 flex flex-col h-screen  border-4 border-gray-100 rounded-xl shadow-lg text-white bg-gray-900">
+    <div class="top-0 left-0 w-1/12 flex flex-col h-screen justify-between mb-3  border-4 border-gray-100 rounded-xl shadow-lg text-white bg-gray-900">
+
+  
+    <div >
     <a
       href="/"
-      class="relative flex items-center justify-center h-10 w-10 mt-8 mb-2 mx-auto text-white-500  hover:bg-red-700 rounded-xl shadow-2xl hover:text-white hover:rounded-xl transition-all duration-30 ease-linear;"
+      class="relative flex items-center justify-center h-10 w-10 mt-8 mb-2 mx-auto text-red-500  hover:bg-red-700 rounded-xl shadow-2xl hover:text-white hover:rounded-xl transition-all duration-30 ease-linear;"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +33,7 @@ export default function leftAppBar() {
       </svg>
     </a>
     <a
-      href="/chat" class="relative flex items-center justify-center h-10 w-10 mt-8 mb-2 mx-auto text-white-500 hover:bg-red-700 bg-black-500 rounded-xl shadow-2xl hover:text-white hover:rounded-xl transition-all duration-30 ease-linear;">
+      href="/chat" class="relative flex items-center justify-center h-10 w-10 mt-8 mb-2 mx-auto text-red-500 hover:bg-red-700 bg-black-500 rounded-xl shadow-2xl hover:text-white hover:rounded-xl transition-all duration-30 ease-linear;">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -47,7 +50,7 @@ export default function leftAppBar() {
       </svg>
     </a>
     <a
-      href="/groupchat" class="relative flex items-center justify-center h-10 w-10 mt-8 mb-2 mx-auto text-white-500  hover:bg-red-700 rounded-xl shadow-2xl hover:text-white hover:rounded-xl transition-all duration-30 ease-linear;">
+      href="/groupchat" class="relative flex items-center justify-center h-10 w-10 mt-8 mb-2 mx-auto text-red-500  hover:bg-red-700 rounded-xl shadow-2xl hover:text-white hover:rounded-xl transition-all duration-30 ease-linear;">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -66,7 +69,7 @@ export default function leftAppBar() {
 
     <a
       href="/post"
-      class="relative flex items-center justify-center h-10 w-10 mt-8 mb-2 mx-auto text-white-500  hover:bg-red-700 rounded-xl shadow-2xl hover:text-white hover:rounded-xl transition-all duration-30 ease-linear;"
+      class="relative flex items-center justify-center h-10 w-10 mt-8 mb-2 mx-auto text-red-500  hover:bg-red-700 rounded-xl shadow-2xl hover:text-white hover:rounded-xl transition-all duration-30 ease-linear;"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -84,7 +87,7 @@ export default function leftAppBar() {
       </svg>
     </a>
     <a
-      href="#" class="relative flex items-center justify-center h-10 w-10 mt-8 mb-2 mx-auto text-white-500  hover:bg-red-700 rounded-xl shadow-2xl hover:text-white hover:rounded-xl transition-all duration-30 ease-linear;">
+      href="#" class="relative flex items-center justify-center h-10 w-10 mt-8 mb-2 mx-auto text-red-500  hover:bg-red-700 rounded-xl shadow-2xl hover:text-white hover:rounded-xl transition-all duration-30 ease-linear;">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -100,6 +103,16 @@ export default function leftAppBar() {
         />
       </svg>
     </a>
+
+  </div>
+  <div>
+  <a href='/profile' class="relative flex items-center justify-center h-10 w-10 mt-8 mb-2 mx-auto text-red-500  hover:bg-red-700 rounded-xl shadow-2xl hover:text-white hover:rounded-xl transition-all duration-30 ease-linear;">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+</svg>
+
+    </a>
+  </div>
   </div>
   )
 }

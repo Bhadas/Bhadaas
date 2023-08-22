@@ -3,7 +3,8 @@ import React from "react";
 
 export default function LeftBar() {
   return (
-    <div class="top-0 left-0 h-screen w-2/12 flex flex-col border-4 border-gray-100 rounded-xl shadow-lg text-white bg-gray-900">
+    <div class="top-0 left-0 h-screen w-2/12 flex flex-col justify-between border-4 border-gray-100 rounded-xl shadow-lg text-white bg-gray-900">
+    <div>
       <i class="relative flex items-center justify-center mt-8 mb-2 mx-auto text-white-500 rounded-xl shadow-2xl hover:text-white hover:rounded-xl transition-all duration-30 ease-linear;">
       {/* <BhadaasLogo/> */}
       <img
@@ -13,8 +14,8 @@ export default function LeftBar() {
                         />
       </i>
 
-      <a href="/" class="flex flex-row items-center p-4 m-2  hover:bg-red-900 hover:rounded-2xl  ">
-        <i class="flex items-center justify-center h-10 w-10 mx-4  text-white-500 hover:bg-green-600 bg-blue-500 rounded-xl shadow-2xl ; ">
+      <a href="/" class="flex flex-row items-center p-4 m-2  hover:bg-red-700 hover:rounded-2xl  ">
+        <i class="flex items-center justify-center h-10 w-10 mx-4  text-white-500   rounded-xl shadow-2xl ; ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -37,8 +38,8 @@ export default function LeftBar() {
         </i>
         <h2 class="text-sm font-bold">Playground</h2>
       </a>
-      <a href="/chat" class="flex flex-row items-center p-4 m-2  hover:bg-red-900 hover:rounded-2xl  ">
-        <i class="flex items-center justify-center h-10 w-10 mx-4  text-white-500 hover:bg-green-600 bg-blue-500 rounded-xl shadow-2xl ; ">
+      <a href="/chat" class="flex flex-row items-center p-4 m-2  hover:bg-red-700 hover:rounded-2xl  ">
+        <i class="flex items-center justify-center h-10 w-10 mx-4  text-white-500   rounded-xl shadow-2xl ; ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -56,8 +57,8 @@ export default function LeftBar() {
         </i>
         <h2 class="text-sm font-bold">Chat</h2>
       </a>
-      <a href="/groupchat" class="flex flex-row items-center p-4 m-2  hover:bg-red-900 hover:rounded-2xl  ">
-        <i class="flex items-center justify-center h-10 w-10 mx-4  text-white-500 hover:bg-green-600 bg-blue-500 rounded-xl shadow-2xl ; ">
+      <a href="/groupchat" class="flex flex-row items-center p-4 m-2  hover:bg-red-700 hover:rounded-2xl  ">
+        <i class="flex items-center justify-center h-10 w-10 mx-4  text-white-500   rounded-xl shadow-2xl ; ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -75,10 +76,9 @@ export default function LeftBar() {
         </i>
         <h2 class="text-sm font-bold">Community Chat</h2>
       </a>
-      <a
-      href="/post" class="flex flex-row items-center p-4 m-2  hover:bg-red-900 hover:rounded-2xl  ">
+      <a href="/post" class="flex flex-row items-center p-4 m-2  hover:bg-red-700 hover:rounded-2xl  ">
         <i
-          class="flex items-center justify-center h-10 w-10 mx-4  text-white-500 hover:bg-green-600 bg-blue-500 rounded-xl shadow-2xl ; ">
+          class="flex items-center justify-center h-10 w-10 mx-4  text-white-500   rounded-xl shadow-2xl ; ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -96,8 +96,8 @@ export default function LeftBar() {
         </i>
         <h2 class="text-sm font-bold">Post</h2>
       </a>
-      <div class="flex flex-row items-center  p-4  m-2  hover:bg-red-900 hover:rounded-2xl ">
-        <i class="flex items-center justify-center h-10 w-10 mx-4  text-white-500 hover:bg-green-600 bg-blue-500 rounded-xl shadow-2xl ; ">
+      <a href="#" class="flex flex-row items-center  p-4  m-2  hover:bg-red-700 hover:rounded-2xl ">
+        <i class="flex items-center justify-center h-10 w-10 mx-4  text-white-500   rounded-xl shadow-2xl ; ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -114,7 +114,20 @@ export default function LeftBar() {
           </svg>
         </i>
         <h2 class="text-sm font-bold">Make Group</h2>
-      </div>
+      </a>
+    </div>
+    <div>
+
+<a href="/profile" class="flex flex-row items-center  p-4  m-2  hover:bg-red-700 hover:rounded-2xl ">
+  <i class="flex items-center justify-center h-10 w-10 mx-4  text-white-500   rounded-xl shadow-2xl ; ">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+</svg>
+
+  </i>
+  <h2 class="text-sm font-bold">Make Group</h2>
+</a>
+</div>
     </div>
   );
 }
