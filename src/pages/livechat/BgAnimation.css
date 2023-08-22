@@ -172,12 +172,12 @@
 			}
 		}
 		.fireplace {
-			width: 300px;
-			height: 0px;
+			width: 225px;
+			height: 48px;
 			position: absolute;
 
-			bottom: -70px;
-			left: 10px;
+			bottom: 0px;
+			left: 57px;
 			z-index: 0;
 			>img { width: 100%; height: auto; }
 		}
@@ -187,7 +187,7 @@
 .background {
 	background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/751678/background-fireplace.svg');
 	background-repeat: no-repeat;
-	background-size: 824px 700px;
+	background-size: cover;
 	background-position: center;
 	position: absolute;
 	top: 0;
@@ -195,7 +195,7 @@
 	bottom: 0;
 	left: 27%;
     width: 43%;
-    height: 93%;
+    height: 70%;
 	animation: float 30s ease-in-out infinite;
 	z-index: 1;
 }
