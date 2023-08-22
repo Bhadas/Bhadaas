@@ -18,8 +18,8 @@ const ProfileSection = () => {
                 </a>
             </div>
             <div class="mx-2 ">
-                <h2 class="mb-0 text-xl font-bold text-black">Ricardo_oRibeir</h2>
-                <p class="mb-0 w-48 text-xs text-gray-400">9,416 Post</p>
+                <h2 class="mb-0 text-xl font-bold text-white">Ricardo_oRibeir</h2>
+                <p class="mb-0 w-48 text-xs text-gray-200">9,416 Post</p>
             </div>
         </div>
 
@@ -28,16 +28,16 @@ const ProfileSection = () => {
 
     {/* <!-- User card--> */}
     <div className=''>
-        <div class="w-full bg-blue-950 bg-cover bg-no-repeat bg-center" style={{height: "200px"}}>
-            <img class="opacity-1 w-full h-full" src={require('../../Image/Bhadas1.png')} alt="" />
+        <div class=" bg-blue-950  bg-no-repeat bg-center" style={{height: "200px"}}>
+            <img class="opacity-1 ml-48 h-full" src={require('../../Image/Bhadas1.png')} alt="" />
         </div>
         <div class="p-4">
             <div class="relative flex w-full">
                 {/* <!-- Avatar --> */}
                 <div class="flex flex-1">
-                    <div style={{marginTop: "-5em"}}>
-                        <div style={{height: "7em", width: "7em"}} class="md rounded-full relative avatar">
-                            <img style={{height: "7em", width: "7em"}} class="md rounded-full relative border-4 border-red-700" src="https://pbs.twimg.com/profile_images/1254779846615420930/7I4kP65u_400x400.jpg" alt="" />
+                    <div style={{marginTop: "-6em"}}>
+                        <div style={{height: "10em", width: "10em"}} class="md rounded-full relative avatar">
+                            <img style={{height: "10em", width: "10em"}} class="md rounded-full relative border-4 border-white" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo4KQ6Z-E4J2GU14fwgWPT1Fn2PCeGQqmFVeWAo9SAK_kKH3VBvJ2XnDgzjCrTZi9rzns&usqp=CAU" alt="" />
                             <div class="absolute"></div>
                         </div>
                     </div>
