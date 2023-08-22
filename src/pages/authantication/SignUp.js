@@ -1,30 +1,38 @@
-import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import api from '../../api/api';
-import axios from 'axios';
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import api from "../../api/api";
+import Cookies from "js-cookie";
+
+
 
 const SignUp = () => {
-   const [email, setEmail] = useState("");
-   const [password, setPassword] = useState("");
-  const navigat = useNavigate();
-
-   const handlesubmit = async (e) => {
-     try {
-       console.log(email);
-       console.log(password);
-       const response = await api.post("/user/register",
-         {
-           email: email,
-           password: password,
-         }
-       );
-       console.log(response.data);
-      localStorage.setItem("token", response.data.token);
-       navigat("/");
-     } catch (error) {
-       console.error(error);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+   const [isLoggedIn, setIsLoggedIn] = useState(!!Cookies.get("token"));
+   useEffect(() => {
+     if (isLoggedIn) {
+       navigate("/");
+     } else {
      }
-   };
+   }, []);
+
+
+  const handlesubmit = async (e) => {
+    try {
+      console.log(email);
+      console.log(password);
+      const response = await api.post("/user/register", {
+        email: email,
+        password: password,
+      });
+      console.log(response.data);
+      Cookies.set("token", response.data.token);
+      navigate("/");
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
     <div class="min-h-screen bg-gray-700 flex flex-col justify-center sm:py-12">
@@ -72,7 +80,7 @@ const SignUp = () => {
               </svg>
             </button>
             <a
-              onClick={() => navigat("/login")}
+              onClick={() => navigate("/login")}
               class="flex justify-center mt-4"
             >
               alredy have an account? Click Here
@@ -127,6 +135,6 @@ const SignUp = () => {
       </div>
     </div>
   );
-}
+};
 
-export default SignUp
+export default SignUp;

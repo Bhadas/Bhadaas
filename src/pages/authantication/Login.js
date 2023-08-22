@@ -1,11 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import api from "../../api/api";
+import Cookies from "js-cookie";
+
+
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const navigat = useNavigate();
+  const navigate = useNavigate();
+ const [isLoggedIn, setIsLoggedIn] = useState(!!Cookies.get("token"));
+ useEffect(() => {
+   if (isLoggedIn) {
+     navigate("/");
+   } else {
+   }
+ }, []);
 
   const handlesubmit = async (e) => {
     try {
@@ -14,8 +24,8 @@ const Login = () => {
         password: password,
       });
       console.log(response.data);
-      localStorage.setItem("token", response.data.token);
-      navigat("/");
+      Cookies.set("token", response.data.token);
+      navigate("/");
     } catch (error) {
       console.error(error);
     }
@@ -67,7 +77,7 @@ const Login = () => {
               </svg>
             </button>
             <a
-              onClick={() => navigat("/signup")}
+              onClick={() => navigate("/signup")}
               class="flex justify-center mt-4"
             >
               Not a member yet? Sign Up
