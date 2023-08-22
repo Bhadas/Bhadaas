@@ -6,7 +6,7 @@ import PostCard from "./PostCard";
 
 const Post = () => {
   return (
-    <div class="flex bg-grey-400">
+    <div class="flex bg-gray-100">
         <LeftBar/>
       <div class="hidden w-4/6 overflow-y-scroll h-screen lg:flex flex-col justify-start items-stretch border-gray-200 border-4 rounded-2xl shadow-lg">
         {/* <main role="main">

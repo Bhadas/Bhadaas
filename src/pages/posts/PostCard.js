@@ -2,7 +2,7 @@ import React from 'react'
 
 const PostCard = () => {
   return (
-    <article class="hover:bg-gray-100 transition duration-350 ease-in-out">
+    <article class="hover:bg-white transition duration-350 ease-in-out">
     <div class="flex flex-shrink-0 p-4 pb-0">
       <a href="#" class="flex-shrink-0 group block">
         <div class="flex items-center">

@@ -8,7 +8,7 @@ export default function SearchPost() {
                 class=" bg-dim-700 h-10 px-10 pr-5 w-full rounded-2xl text-sm focus:outline-none bg-purple-white shadow  border-0"/>
         </div>
         {/* <!--trending tweet section--> */}
-        <div class="max-w-sm rounded-lg bg-dim-700 overflow-hidden border-2 m-4">
+        <div class="max-w-sm rounded-lg bg-dim-700 overflow-hidden bg-white border-2 m-4">
 
 
             <div class="text-xl text-balck flex items-center p-4">Trending</div>

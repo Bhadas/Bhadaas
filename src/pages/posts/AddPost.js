@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function AddPost() {
     return (
-        <aside className='m-4 p-4 border-red-200 border-2 rounded-xl'>
+        <aside className='m-4 p-4 bg-white border-red-200 border-2 rounded-xl'>
             {/* <hr class="border-gray-300"/> */}
                 {/* <!--middle creat tweet--> */}
                 <div class="flex">

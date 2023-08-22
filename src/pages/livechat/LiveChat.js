@@ -26,14 +26,11 @@ function LiveChat() {
     <div class="flex bg-blue-950">
       <LeftBar />
       {/* <!-- massage section --> */}
-<<<<<<< HEAD
-      <div 
-        class="  hidden  w-4/6 lg:flex flex-col justify-start items-stretch h-screen  border-4 border-gray-100 rounded-2xl shadow-lg"
-      >
-=======
+
+
 
       <div class="  hidden  w-4/6 lg:flex flex-col justify-start items-stretch h-screen  border-4 border-gray-100 rounded-2xl shadow-lg">
->>>>>>> 35f0e49ed67b1d8495b1de5bb3ca4dc32345d559
+
         <div className="flex justify-end m-4">
           <svg
             class="w-6 h-6 fill-current bg-red-500 rounded-xl "
