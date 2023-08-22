@@ -4,7 +4,7 @@ export default function EmojiDrawer({ isOpen, onClose }) {
   return (
     <div
       id="drawer-bottom-example"
-      className="bottom-0 left-0 right-0 z-40  p-4 overflow-y-auto transition-transform bg-white dark:bg-gray-800 transform-none"
+      className="bottom-0 left-0 right-0 z-40 border-2  border-red-400 rounded-t-xl p-4 overflow-y-auto transition-transform  dark:bg-gray-800 transform-none"
       tabIndex="-1"
       aria-labelledby="drawer-bottom-label"
     >
@@ -17,7 +17,7 @@ export default function EmojiDrawer({ isOpen, onClose }) {
         type="button"
         // data-drawer-hide="drawer-bottom-example"
         // aria-controls="drawer-bottom-example"
-        className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white"
+        className="text-red-400 bg-transparent hover:bg-gray-200 hover:text-red-900 rounded-lg text-sm w-8 h-8 absolute inline-flex items-center justify-center dark:hover:bg-red-400 dark:hover:text-white"
       >
         <svg
           class="w-3 h-3"

@@ -13,7 +13,7 @@ export default function ChatHeader() {
         />
         <div class="ml-3">
           <h2 class="font-medium">Bhadaas group</h2>
-          <p class="text-xs text-gray-500">4 memebres</p>
+          <p class="text-xs text-red-500">4 memebres</p>
         </div>
       </div>
       <div class="flex flex-row">

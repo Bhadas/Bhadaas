@@ -31,7 +31,7 @@ export default function ChatInput() {
         <div class="flex-1 px-3">
           <input
             type="text"
-            class="w-full border-2 border-gray-100 rounded-full px-4 py-1 outline-none text-gray-500 focus:outline-none focus:ring"
+            class="w-full border-2 border-red-300 rounded-full px-4 py-1 outline-none text-gray-500 focus:outline-none focus:ring"
             placeholder="Write a message..."
           />
         </div>

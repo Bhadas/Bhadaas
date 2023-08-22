@@ -54,7 +54,7 @@ export default function ChatBox() {
          {/* right side message start here */}
           <div class="flex flex-row justify-end">
             <div class="p-1">
-              <div class="px-4 py-3 rounded-full my-2 bg-blue-500 text-white flex flex-row items-center">
+              <div class="px-4 py-3 rounded-full my-2 bg-red-400 text-white flex flex-row items-center">
                 <p class="text-sm flex">
                   There are many variations of passages of Lorem Ipsum
                 </p>
@@ -114,7 +114,7 @@ export default function ChatBox() {
           {/* left side message end  */}
           <div class="flex flex-row justify-end">
             <div class="p-1">
-              <div class="px-4 py-3 rounded-full my-2 bg-blue-500 text-white flex flex-row items-center">
+              <div class="px-4 py-3 rounded-full my-2 bg-red-400 text-white flex flex-row items-center">
                 <p class="text-sm flex">
                   There are many variations of passages of Lorem Ipsum
                 </p>
