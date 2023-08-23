@@ -19,7 +19,7 @@ const SignUp = () => {
          }
        );
        console.log(response.data);
-      localStorage.setItem("token", response.data.token);
+      localStorage.setItem("user", response.data);
        navigat("/");
      } catch (error) {
        console.error(error);

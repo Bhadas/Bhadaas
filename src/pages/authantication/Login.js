@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import api from "../../api/api";
 
@@ -14,12 +14,23 @@ const Login = () => {
         password: password,
       });
       console.log(response.data);
-      localStorage.setItem("token", response.data.token);
+      localStorage.setItem("user", response.data);
       navigat("/");
     } catch (error) {
       console.error(error);
     }
   };
+
+  const checkUser = async ()=>{
+    const user = await localStorage.getItem('user');
+    if(user){
+      navigat('/');
+    }
+  }
+
+  useEffect(() => {
+    checkUser();
+  }, []);
 
   return (
     <div class="min-h-screen bg-gray-700 flex flex-col justify-center sm:py-12">
