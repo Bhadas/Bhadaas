@@ -1,13 +1,24 @@
 import React, { useState } from "react";
 import EmojiDrawer from "./EmojiDrawer";
+import { post } from "../api/api";
+import { ChatState } from "../context.js/chatContext";
 
 export default function ChatInput() {
+  const { selectedChat, user } = ChatState();
    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-
+   const [message, setMessage] = useState("");
    const handleDrawerOpen = () => {
      setIsDrawerOpen(!isDrawerOpen); // Toggle the state
    };
     console.log("Emoji button clicked",isDrawerOpen);
+    console.log(message)
+   const sendMessage = async(key)=>{
+    if(key== 'Enter' && message.length > 0){
+      const res = await post('/message', {chatId : selectedChat, content: message} );
+      console.log(res);
+      setMessage("");
+    }
+   } 
   return (
     <div>
         {isDrawerOpen && (
@@ -33,6 +44,9 @@ export default function ChatInput() {
             type="text"
             class="w-full border-2 border-red-300 rounded-full px-4 py-1 outline-none text-gray-500 focus:outline-none focus:ring"
             placeholder="Write a message..."
+            value={message}
+            onChange = {(e)=>{setMessage(e.target.value);}}
+            onKeyDown= {(e)=>{sendMessage(e.key);}}
           />
         </div>
         <div class="flex flex-row">

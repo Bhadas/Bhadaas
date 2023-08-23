@@ -1,38 +1,34 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import api from "../../api/api";
-import Cookies from "js-cookie";
-
-
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import api from '../../api/api';
+import axios from 'axios';
 
 const SignUp = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+   const [email, setEmail] = useState("");
+   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-   const [isLoggedIn, setIsLoggedIn] = useState(!!Cookies.get("token"));
-   useEffect(() => {
-     if (isLoggedIn) {
-       navigate("/");
-     } else {
+
+   const handlesubmit = async (e) => {
+     try {
+       console.log(email);
+       console.log(password);
+       const response = await api.post("/user/register",
+         {
+           email: email,
+           password: password,
+         }
+       );
+       console.log(response.data);
+       if(response.status === 200){
+        const user = await localStorage.setItem("user", JSON.stringify(response.data));
+        navigate('/');
+      }else{
+        console.log(response.data);
+      }
+     } catch (error) {
+       console.error(error);
      }
-   }, []);
-
-
-  const handlesubmit = async (e) => {
-    try {
-      console.log(email);
-      console.log(password);
-      const response = await api.post("/user/register", {
-        email: email,
-        password: password,
-      });
-      console.log(response.data);
-      Cookies.set("token", response.data.token);
-      navigate("/");
-    } catch (error) {
-      console.error(error);
-    }
-  };
+   };
 
   return (
     <div class="min-h-screen bg-gray-700 flex flex-col justify-center sm:py-12">
@@ -135,6 +131,6 @@ const SignUp = () => {
       </div>
     </div>
   );
-};
+}
 
-export default SignUp;
+export default SignUp
