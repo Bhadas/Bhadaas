@@ -1,21 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import api from "../../api/api";
-import Cookies from "js-cookie";
-
-
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
- const [isLoggedIn, setIsLoggedIn] = useState(!!Cookies.get("token"));
- useEffect(() => {
-   if (isLoggedIn) {
-     navigate("/");
-   } else {
-   }
- }, []);
+
 
   const handlesubmit = async (e) => {
     try {
@@ -24,12 +15,23 @@ const Login = () => {
         password: password,
       });
       console.log(response.data);
-      Cookies.set("token", response.data.token);
+      const myInfo = await localStorage.setItem("user", JSON.stringify(response.data));
       navigate("/");
     } catch (error) {
       console.error(error);
     }
   };
+
+  const checkUser = async ()=>{
+    const user = await JSON.parse(localStorage.getItem('user'));
+    if(user){
+      navigate('/');
+    }
+  }
+
+  useEffect(() => {
+    checkUser();
+  }, []);
 
   return (
     <div class="min-h-screen bg-gray-700 flex flex-col justify-center sm:py-12">

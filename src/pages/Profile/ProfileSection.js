@@ -1,6 +1,17 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const ProfileSection = () => {
+    const [user, setUser] = useState();
+
+    const getUser = async()=>{
+        const myUser = await JSON.parse(localStorage.getItem('user'));
+        console.log(myUser);
+        setUser(myUser);
+    }
+    console.log("user", user)
+    useEffect(() => {
+        getUser();
+    }, []);
   return (
     <section class=" h-full mx-4 border-2 rounded-xl border-red-400">
     {/* <!--Content (Center)-->
@@ -54,8 +65,8 @@ const ProfileSection = () => {
             <div class="space-y-1 justify-center w-full mt-3 ml-3">
                 {/* <!-- User basic--> */}
                 <div>
-                    <h2 class="text-xl leading-6 font-bold text-black">Ricardo_oRibeir</h2>
-                    <p class="text-sm leading-5 font-medium text-gray-600">@Ricardo_oRibeir</p>
+                    <h2 class="text-xl leading-6 font-bold text-black">{user?.email}</h2>
+                    <p class="text-sm leading-5 font-medium text-gray-600">@{user?.email}</p>
                 </div>
                 {/* <!-- Description and others --> */}
           
