@@ -11,6 +11,7 @@ import Login from "./pages/authantication/Login";
 import SignUp from "./pages/authantication/SignUp";
 // import Test from "./Component/Test";
 import Profile from "./pages/Profile/Profile";
+import ChatProvider from "./context.js/chatContext";
 
 function App() {
 
@@ -18,20 +19,21 @@ function App() {
 
   return (
     <>
-    <BrowserRouter>
-
-    <Routes>
-      <Route path="/login" element={<Login/>}/>
-      <Route path="/signup" element={<SignUp/>}/>
-      <Route path="/" element={<LiveChat/>}/>
-      <Route path="/chat" element={<SingleChat/>}/>
-      <Route path="/playground" element={<Home/>}/>
-      <Route path="/groupchat" element={<Home/>}/>
-      <Route path="/post" element={<Post/>}/>
-      {/* <Route path="/test" element={<Test/>}/> */}
-      <Route path="/Profile" element={<Profile/>}/>
-    </Routes>
-  </BrowserRouter>
+      <BrowserRouter>
+        <ChatProvider>
+          <Routes>
+            <Route path="/login" element={<Login/>}/>
+            <Route path="/signup" element={<SignUp/>}/>
+            <Route path="/" element={<LiveChat/>}/>
+            <Route path="/chat" element={<SingleChat/>}/>
+            <Route path="/playground" element={<Home/>}/>
+            <Route path="/groupchat" element={<Home/>}/>
+            <Route path="/post" element={<Post/>}/>
+            {/* <Route path="/test" element={<Test/>}/> */}
+            <Route path="/Profile" element={<Profile/>}/>
+          </Routes>
+        </ChatProvider>
+      </BrowserRouter>
 
     </>
   );

@@ -38,7 +38,7 @@ const ProfileSection = () => {
                 </a>
             </div>
             <div class="mx-2 ">
-                <h2 class="mb-0 text-xl font-bold text-white">Ricardo_oRibeir</h2>
+                <h2 class="mb-0 text-xl font-bold text-white">{user?.username}</h2>
                 <p class="mb-0 w-48 text-xs text-gray-200">9,416 Post</p>
             </div>
                     <button class="flex justify-center  max-h-max whitespace-nowrap focus:outline-none  focus:ring  rounded max-w-max border bg-transparent border-white-500 text-gray-500 hover:border-red-800 items-center hover:shadow-lg font-bold py-2 px-6  mr-0 ml-auto" onClick={()=>logout()}>
@@ -60,13 +60,7 @@ const ProfileSection = () => {
                 <div class="flex flex-1">
                     <div style={{marginTop: "-6em"}}>
                         <div style={{height: "10em", width: "10em"}} class="md rounded-full relative avatar">
-                        <img
-                            style={{ height: '10em', width: '10em' }}
-                            className="md rounded-full relative border-4 border-white"
-                            src={user.image ? user.image : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo4KQ6Z-E4J2GU14fwgWPT1Fn2PCeGQqmFVeWAo9SAK_kKH3VBvJ2XnDgzjCrTZi9rzns&usqp=CAU'}
-                            alt=""
-                            />
-
+                            <img style={{height: "10em", width: "10em"}} class="md rounded-full relative border-4 border-white" src={user?.image} alt="" />
                             <div class="absolute"></div>
                         </div>
                     </div>
@@ -84,7 +78,7 @@ const ProfileSection = () => {
                 {/* <!-- User basic--> */}
                 <div>
                     <h2 class="text-xl leading-6 font-bold text-black">{user?.username}</h2>
-                    <p class="text-sm leading-5 font-medium text-gray-600">{user?.email}</p>
+                    <p class="text-sm leading-5 font-medium text-gray-600">{user?.username?.toLowerCase()}@gmail.com</p>
                 </div>
                 {/* <!-- Description and others --> */}
           

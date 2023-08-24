@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import api from "../../api/api";
 
+
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate();
-
+  const navigate =   useNavigate();
 
   const handlesubmit = async (e) => {
     try {
@@ -14,25 +14,28 @@ const Login = () => {
         email: email,
         password: password,
       });
-      console.log(response.data);
-      localStorage.setItem("user", JSON.stringify(response.data));
-      navigate("/");
+      console.log(response);
+      if(response.status === 200){
+        const user = await localStorage.setItem("user", JSON.stringify(response.data));
+        navigate('/');
+      }else{
+        console.log(response.data);
+      }
+      
     } catch (error) {
       console.error(error);
     }
   };
-
   const checkUser = async ()=>{
-    const user = await JSON.parse(localStorage.getItem('user'));
-    if(user){
-      navigate('/');
+    const user = await localStorage.getItem('user');
+    if(!user){
+      navigate('/login')
     }
   }
 
   useEffect(() => {
-    checkUser();
+    checkUser()
   }, []);
-
   return (
     <div class="min-h-screen bg-gray-700 flex flex-col justify-center sm:py-12">
       <div class="p-10 xs:p-0 mx-auto md:w-full md:max-w-md">

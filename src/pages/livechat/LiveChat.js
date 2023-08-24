@@ -6,20 +6,23 @@ import GroupDetail from "./GroupDetail";
 import BgAnimation from "./BgAnimation";
   import Cookies from "js-cookie";
 import { Navigate, useNavigate } from "react-router-dom";
+import { ChatState } from "../../context.js/chatContext";
 
 
 function LiveChat() {
-  const token = Cookies.get("token");
-  console.log("token",token);
-  const [isLoggedIn, setIsLoggedIn] = useState(!!Cookies.get("token"));
+  const { user } = ChatState();
+  
   const navigate= useNavigate()
-  useEffect(()=>{
-    if(isLoggedIn){
-      
-    }else{
-      navigate("/login")
-    }
-  },[])
+  
+  // const checkUser = ()=>{
+  //   if(!user){
+  //     navigate('/login')
+  //   }
+  // }
+  // useEffect(() => {
+  //   checkUser();
+  // }, []);
+ 
 
 
   return (
