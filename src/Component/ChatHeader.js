@@ -7,7 +7,7 @@ export default function ChatHeader(props) {
     <div class="flex flex-row items-center justify-between px-3 py-2 bg-gray-50 rounded-t-2xl bg-opacity-50  border-gray-100">
       <div class="flex">
         <img
-          src="https://cdn.pixabay.com/photo/2021/08/24/16/34/broken-heart-6571108_640.png"
+          src={props.image ? props.image : "https://cdn.pixabay.com/photo/2021/08/24/16/34/broken-heart-6571108_640.png"}
           class="h-12 w-12 rounded-full self-end"
           alt=""
         />
