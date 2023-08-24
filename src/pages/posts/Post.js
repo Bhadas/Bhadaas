@@ -3,8 +3,43 @@ import LeftBar from "../../Component/LeftBar";
 import SearchPost from "./SearchPost";
 import AddPost from "./AddPost";
 import PostCard from "./PostCard";
+import { useState } from "react";
+import { useEffect } from "react";
+import api from "../../api/api";
+import LoadingAnimation from "../../Component/LoadingAnimation";
 
 const Post = () => {
+
+  const [isLoading, setIsLoading] = useState(false)
+  const [user, setUser] = useState('')
+  const [posts, setPosts] = useState([])
+    
+    useEffect(()=>{
+        setUser(JSON.parse(localStorage.getItem("user")))
+        setTimeout(()=>{
+          fetchPosts();
+        },3000)
+    },[])
+
+
+  const fetchPosts = async()=>{
+    setIsLoading(true)
+    console.log(user.token)
+    try{
+      const response = await api.get('/posts/all-posts',{
+        headers:{
+            Authorization: `Bearer ${user.token}`
+        }
+    })
+    console.log(response.data)
+      setPosts(response.data.data)
+    }catch(error){
+      console.log(error)
+    } finally{
+      setIsLoading(false)
+    }
+  }
+
   return (
     <div class="flex bg-gray-100">
         <LeftBar/>
@@ -29,11 +64,9 @@ const Post = () => {
                 </div>
             </div>
             <hr class="border-red-300 m-4"/>
-            <AddPost/>
+            <AddPost fetchPosts={fetchPosts}/>
             {/* <!--Content (Center)--> */}
-            <PostCard/>      
-            <PostCard/>           
-            <PostCard/>          
+            {isLoading ? <LoadingAnimation/> : <PostCard posts={posts}/>}      
           {/* </section>
         </main> */}
       </div>

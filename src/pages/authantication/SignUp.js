@@ -9,7 +9,7 @@ const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-   const [isLoggedIn, setIsLoggedIn] = useState(!!Cookies.get("token"));
+   const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem("user"));
    useEffect(() => {
      if (isLoggedIn) {
        navigate("/");
@@ -27,7 +27,7 @@ const SignUp = () => {
         password: password,
       });
       console.log(response.data);
-      Cookies.set("token", response.data.token);
+      localStorage.setItem("user", JSON.stringify(response.data));
       navigate("/");
     } catch (error) {
       console.error(error);

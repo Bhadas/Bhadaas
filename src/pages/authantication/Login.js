@@ -15,7 +15,7 @@ const Login = () => {
         password: password,
       });
       console.log(response.data);
-      const myInfo = await localStorage.setItem("user", JSON.stringify(response.data));
+      localStorage.setItem("user", JSON.stringify(response.data));
       navigate("/");
     } catch (error) {
       console.error(error);
