@@ -15,6 +15,11 @@ export default function ChatBox() {
       setMessageList(res?.data);
     }
   }
+  const updateMessage = (msg)=>{
+    let myMsg = [...messageList, msg];
+    setMessageList(myMsg);
+  }
+  
   console.log("me-->", user);
   useEffect(() => {
     fetchChatMsg();
@@ -120,7 +125,7 @@ export default function ChatBox() {
           {/* left side message end  */}
         </div>
       </div>
-      <ChatInput />
+      <ChatInput updateMessage = {updateMessage} />
     </div>
     // </div>
   );

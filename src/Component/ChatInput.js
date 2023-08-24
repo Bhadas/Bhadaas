@@ -3,8 +3,8 @@ import EmojiDrawer from "./EmojiDrawer";
 import { post } from "../api/api";
 import { ChatState } from "../context.js/chatContext";
 
-export default function ChatInput() {
-  const { selectedChat, user } = ChatState();
+export default function ChatInput(props) {
+  const { selectedChat,setSelectedChat, user } = ChatState();
    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
    const [message, setMessage] = useState("");
    const handleDrawerOpen = () => {
@@ -16,7 +16,10 @@ export default function ChatInput() {
     if(key== 'Enter' && message.length > 0){
       const res = await post('/message', {chatId : selectedChat, content: message} );
       console.log(res);
-      setMessage("");
+      if(res.statusCode === 200){
+        setMessage("");
+        props.updateMessage(res.data);
+      }
     }
    } 
   return (
