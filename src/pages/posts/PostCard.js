@@ -1,10 +1,10 @@
 import React from 'react'
 
 const PostCard = ({posts}) => {
-  
+  console.log(posts)
   return (
     <>
-    {posts.map((item)=>(
+    {posts.slice().reverse().map((item)=>(
        <article key={item._id} class="hover:bg-white transition duration-350 ease-in-out">
        <div class="flex flex-shrink-0 p-4 pb-0">
          <a href="#" class="flex-shrink-0 group block">

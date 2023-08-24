@@ -7,8 +7,8 @@ const api = axios.create({
 
 export default api;
 
-export const baseUrl = `http://localhost:5000/api`;
-// export const baseUrl = `https://bhadas-server.onrender.com/api`;
+// export const baseUrl = `http://localhost:5000/api`;
+export const baseUrl = `https://bhadas-server.onrender.com/api`;
 
 export const post = async (url, data) => {
   try {
