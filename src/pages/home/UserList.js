@@ -53,7 +53,7 @@ export default function UserList() {
         {/* <!-- user list --> */}
         {
           myGroups?.map((group)=>(
-          <div class="flex flex-row py-4 px-2 justify-center items-center" onClick={()=>{getSelectedChat(group._id)}}>
+          <div class="flex flex-row py-4 px-2 justify-center items-center" role="button" onClick={()=>{getSelectedChat(group._id)}}>
             <div class="w-1/4 mr-4">
               <img
                 src="https://source.unsplash.com/_7LbC5J-jw4/600x600"

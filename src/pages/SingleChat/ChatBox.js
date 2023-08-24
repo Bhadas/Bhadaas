@@ -36,7 +36,7 @@ export default function ChatBox() {
           {
             messageList?.map((message)=>(
               user._id== message.sender._id ?
-              <div class="flex flex-row justify-end">
+              <div class="flex flex-row justify-end" >
             <div class="p-1">
               <div class="px-4 py-3 rounded-full my-2 bg-red-400 text-white flex flex-row items-center">
                 <p class="text-sm flex">

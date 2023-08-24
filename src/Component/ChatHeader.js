@@ -2,7 +2,7 @@ import React from "react";
 import ChatBox from "../pages/home/ChatBox";
 import ChatInput from "./ChatInput";
 
-export default function ChatHeader() {
+export default function ChatHeader(props) {
   return (
     <div class="flex flex-row items-center justify-between px-3 py-2 bg-gray-50 rounded-t-2xl bg-opacity-50  border-gray-100">
       <div class="flex">
@@ -12,8 +12,8 @@ export default function ChatHeader() {
           alt=""
         />
         <div class="ml-3">
-          <h2 class="font-medium">Bhadaas group</h2>
-          <p class="text-xs text-red-500">4 memebres</p>
+          <h2 class="font-medium">{props?.chatName}</h2>
+          <p class="text-xs text-red-500">{props?.chatMember} memebres</p>
         </div>
       </div>
       <div class="flex flex-row">

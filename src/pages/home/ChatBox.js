@@ -19,7 +19,7 @@ export default function ChatBox() {
     let myMsg = [...messageList, msg];
     setMessageList(myMsg);
   }
-  
+
   console.log("me-->", user);
   useEffect(() => {
     fetchChatMsg();
@@ -28,7 +28,7 @@ export default function ChatBox() {
   return (
     // <div className="flex">
     <div class="w-7/12  bg-white sm:w-7/12 h-screen lg:flex flex-col justify-start items-stretch border-4 border-gray-100 lg:rounded-r-md  rounded-2xl shadow-lg">
-      <ChatHeader />
+      <ChatHeader chatName = {messageList?.[0]?.chat?.chatName} chatMember={messageList?.[0]?.chat?.users?.length} />
       {/* <!-- Messages --> */}
       <div class="flex-auto flex flex-col justify-between overflow-y-auto">
         <div class="flex flex-col">
@@ -65,7 +65,7 @@ export default function ChatBox() {
             </div>
             <div class="w-11/12 p-2">
               <div class="bg-gray-50 p-3 rounded-xl mb-2 relative">
-                <h2 class="text-sm font-semibold mb-2 text-red-400">Yaeko Lindblom</h2>
+                <h2 class="text-sm font-semibold mb-2 text-red-400">{message?.sender?.email}</h2>
                 <p class="text-sm">
                   {message?.content}
                 </p>
