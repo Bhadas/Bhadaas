@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { get, post } from "../../api/api";
 import { ChatState } from "../../context.js/chatContext";
 export default function UserList() {
-  const { setSelectedChat } = ChatState();
+  const { setSelectedChat, setSelectedUser } = ChatState();
   const [userList, setUserList] = useState([]);
   const [myChats, setMyChats] = useState([]);
 
@@ -15,22 +15,25 @@ export default function UserList() {
 
   const getMyAllChats = async()=>{
     const res = await get('/chat');
-    console.log(res)
-    setMyChats(res.data);
+    console.log("my chat---->",res)
+    setMyChats(res?.data);
   }
 
-  const createNewChat = async (id) => {
-    const res = await post('/chat', {userId : id});
-    console.log(res);
+  const createNewChat = async (item) => {
+    console.log("id  for new chat", item._id);
+    const res = await post('/chat', {userId : item._id});
+    console.log("new chat", res);
     if(res.statusCode === 200) {
       setSelectedChat(res.data._id);
+      setSelectedUser(item);
     }
-    
   }
 
-  const getSelectedChat = async (id) => {
-    console.log('my selected chat', id);
-      setSelectedChat(id);
+  const getSelectedChat = async (item) => {
+    console.log('my selected chat', item._id);
+      setSelectedChat(item._id);
+      setSelectedUser(item?.users?.[1]);
+      console.log("item-->",item);
   }
 
 
@@ -66,16 +69,16 @@ export default function UserList() {
           {
             userList?.map((item)=>(
               <>
-                <div class="flex flex-row py-4 px-2 items-center" role="button" onClick={()=>{createNewChat(item._id)}}  >
+                <div class="flex flex-row py-4 px-2 items-center" role="button" onClick={()=>{createNewChat(item)}}  >
                   <div class="w-1/4 mr-4">
                     <img
-                      src="https://source.unsplash.com/_7LbC5J-jw4/600x600"
+                      src={item.image}
                       class="object-cover h-12 w-12 rounded-full"
                       alt=""
                     />
                   </div>
                   <div class="w-full">
-                    <div class="text-sm font-bold">{item.email}</div>
+                    <div class="text-sm font-bold">{item?.username}</div>
                     <span class="text-xs text-gray-400 font-normal">
                       Pick me at 9:00 Am
                     </span>
@@ -91,16 +94,16 @@ export default function UserList() {
           {
             myChats?.map((item)=>(
               <>
-                <div class="flex flex-row py-4 px-2 items-center" role="button" onClick={()=>{getSelectedChat(item._id)}}  >
+                <div class="flex flex-row py-4 px-2 items-center" role="button" onClick={()=>{getSelectedChat(item)}}  >
                   <div class="w-1/4 mr-4">
                     <img
-                      src="https://source.unsplash.com/_7LbC5J-jw4/600x600"
+                      src={item?.users?.[1]?.image}
                       class="object-cover h-12 w-12 rounded-full"
                       alt=""
                     />
                   </div>
                   <div class="w-full">
-                    <div class="text-sm font-bold">{item?.users?.[1]?.email}</div>
+                    <div class="text-sm font-bold">{item?.users?.[1]?.username}</div>
                     <span class="text-xs text-gray-400 font-normal">
                       Pick me at 9:00 Am
                     </span>

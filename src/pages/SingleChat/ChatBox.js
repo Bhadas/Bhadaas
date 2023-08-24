@@ -6,7 +6,7 @@ import { get } from "../../api/api";
 // import ChatComponent from "../../Component/ChatComponent";
 
 export default function ChatBox() {
-  const { selectedChat, user } = ChatState();
+  const { selectedChat, user, selectedUser } = ChatState();
   const [messageList, setMessageList] = useState([]);
   const fetchChatMsg = async () => {
     if (selectedChat !== null) {
@@ -28,7 +28,7 @@ export default function ChatBox() {
   return (
     // <div className="flex">
     <div class="w-7/12  bg-white sm:w-7/12 h-screen lg:flex flex-col justify-start items-stretch border-4 border-gray-100 lg:rounded-r-md  rounded-2xl shadow-lg">
-      <ChatHeader />
+      <ChatHeader chatName = {selectedUser?.username} chatMember={messageList?.[0]?.chat?.users?.length} />
       {/* <!-- Messages --> */}
       <div class="flex-auto flex flex-col justify-between overflow-y-auto">
         <div class="flex flex-col">

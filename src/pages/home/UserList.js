@@ -16,7 +16,7 @@ export default function UserList() {
   const getMyAllGroups = async()=>{
     const res = await get('/chat/allgroup');
     console.log(res)
-    setMyGroups(res.data);
+    setMyGroups(res?.data);
   }
 
   const createNewChat = async (id) => {

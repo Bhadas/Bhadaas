@@ -1,23 +1,25 @@
 import axios from "axios";
 
 const api = axios.create({
-  // baseURL: "http://localhost:5000/api",
-  baseURL: "https://bhadas-server.onrender.com/api",
+  baseURL: "http://localhost:5000/api",
+  // baseURL: "https://bhadas-server.onrender.com/api",
 });
 
 export default api;
 
-// export const baseUrl = `http://localhost:5000/api`;
-export const baseUrl = `https://bhadas-server.onrender.com/api`;
+export const baseUrl = `http://localhost:5000/api`;
+// export const baseUrl = `https://bhadas-server.onrender.com/api`;
 
 export const post = async (url, data) => {
   try {
     const user = await localStorage.getItem("user");
+    console.log("my user", user);
     if (user) {
       const userData = JSON.parse(user);
       const headers = {
         authorization: `Bearer ${userData.token}`,
       };
+      console.log("my data", data, headers);
       const res = await axios.post(baseUrl + url, data, { headers: headers });
       return { statusCode: res.status, data: res.data };
     }
