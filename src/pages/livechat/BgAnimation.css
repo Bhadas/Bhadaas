@@ -172,12 +172,12 @@
 			}
 		}
 		.fireplace {
-			width: 225px;
-			height: 48px;
+			width: 205px;
+			height: 55px;
 			position: absolute;
 
 			bottom: 0px;
-			left: 57px;
+			left: 77px;
 			z-index: 0;
 			>img { width: 100%; height: auto; }
 		}
@@ -214,8 +214,8 @@
 	background-position: center;
 	z-index: 0;
 }
-/* .ball {
+.ball {
     position: fixed;
     border-radius: 100%;
     opacity: 0.9;
-} */
+}

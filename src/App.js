@@ -12,6 +12,7 @@ import SignUp from "./pages/authantication/SignUp";
 // import Test from "./Component/Test";
 import Profile from "./pages/Profile/Profile";
 import ChatProvider from "./context.js/chatContext";
+import LandingPage from "./pages/LandingPage/LandingPage";
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
             <Route path="/post" element={<Post/>}/>
             {/* <Route path="/test" element={<Test/>}/> */}
             <Route path="/Profile" element={<Profile/>}/>
+            <Route path="/landing" element={<LandingPage/>}/>
           </Routes>
         </ChatProvider>
       </BrowserRouter>

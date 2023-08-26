@@ -3,8 +3,8 @@ import React from 'react'
 export default function RightMenu() {
     
   return (
-      <div class="hidden h-screen  xl:block bg-white rounded-  md p-5 overflow-y-auto border-4 border-gray-100 rounded-xl shadow-lg">
-        <main>
+      <div class="hidden h-screen w-64 xl:block bg-white overflow-y-auto border-4 border-gray-100 rounded-xl shadow-lg">
+        <main className='p-4'>
             <div class="flex flex-col justify-center items-center my-4">
                 <img src="https://cdn.pixabay.com/photo/2021/08/24/16/34/broken-heart-6571108_640.png"
                     class="w-32 h-32 mb-4 rounded-full" alt=""/>
@@ -98,10 +98,10 @@ export default function RightMenu() {
             </div>
             <div class="">
                 <ul class="flex flex-row justify-between items-center bg-gray-50 rounded-lg p-1">
-                    <li class="bg-white hover:text-red-500 px-3 py-1 text-xs font-semibold rounded-md cursor-pointer">Media</li>
-                    <li class="text-xs text-red-500 font-semibold px-3 py-1 cursor-pointer">Links</li>
-                    <li class="text-xs text-red-500 font-semibold px-3 py-1 cursor-pointer">Files</li>
-                    <li class="text-xs text-red-500 font-semibold px-3 py-1 cursor-pointer">Voice</li>
+                    <li class="bg-white hover:text-red-500 px-2 py-1 text-xs font-semibold rounded-md cursor-pointer">Media</li>
+                    <li class="text-xs text-red-500 font-semibold px-2 py-1 cursor-pointer">Links</li>
+                    <li class="text-xs text-red-500 font-semibold px-2 py-1 cursor-pointer">Files</li>
+                    <li class="text-xs text-red-500 font-semibold px-2 py-1 cursor-pointer">Voice</li>
                 </ul>
                             </div>
 

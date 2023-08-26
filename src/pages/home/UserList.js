@@ -23,7 +23,7 @@ export default function UserList() {
     const res = await post('/chat', {userId : id});
     console.log(res);
     if(res.statusCode === 200) {
-      setSelectedChat(res.data._id);
+      setSelectedChat(res?.data._id);
     }
   }
 

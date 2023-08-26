@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function SearchPost() {
   return (
-    <div class="  border-4 w-2/12 rounded-xl h-screen">
+    <div class="  border-4 w-2/12 rounded-xl h-screen shadow-lg">
         <div class="relative text-gray-300 p-5">
             <input type="search" name="search" placeholder="Search Twitter"
                 class=" bg-dim-700 h-10 px-10 pr-5 w-full rounded-2xl text-sm focus:outline-none bg-purple-white shadow  border-0"/>

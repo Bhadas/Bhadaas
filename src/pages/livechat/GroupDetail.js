@@ -4,8 +4,8 @@ export default function GroupDetail() {
   return (
     // <!-- right menu  start -->
 
-    <div class="hidden w-2/12 xl:block p-5 overflow-y-auto h-screen  border-4 border-gray-100 rounded-xl shadow-lg">
-        <main>
+    <div class="hidden w-72 xl:block overflow-y-auto h-screen border-4 border-gray-100 rounded-xl shadow-lg">
+        <main className='m-4' >
             <div class="flex flex-row justify-center items-center mx-4">
                 <img src="https://cdn.pixabay.com/photo/2021/08/24/16/34/broken-heart-6571108_640.png"
                     class="w-12 h-12 mr-4 rounded-full" alt=""/>
@@ -53,7 +53,7 @@ export default function GroupDetail() {
                     </li>
                 </ul>
             </div>
-            <div class="my-4">
+            <div class="my-4 ">
                 <ul>
                     <li class="flex flex-row my-3">
                         <div class="mr-4">
@@ -113,7 +113,7 @@ export default function GroupDetail() {
                             class="w-10 h-10 rounded-full mr-4" alt=""/>
                             <h2 class="text-sm font-bold text-white">Live Pooja</h2>
                         </div> 
-                        </div> 
+             </div> 
         </main>
 
         {/* <!-- right menu  end --> */}

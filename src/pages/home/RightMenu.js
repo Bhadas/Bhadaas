@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function RightMenu() {
   return (
-      <div class="hidden h-screen  xl:block bg-white rounded-  md p-5 overflow-y-auto border-4 border-gray-100 rounded-xl shadow-lg">
+      <div class="hidden h-screen  xl:block bg-white rounded-  md p-5 overflow-y-auto border-4 border-gray-100 rounded-xl ">
         <main>
             <div class="flex flex-col justify-center items-center my-4">
                 <img src="https://cdn.pixabay.com/photo/2021/08/24/16/34/broken-heart-6571108_640.png"
