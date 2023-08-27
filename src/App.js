@@ -12,7 +12,7 @@ import SignUp from "./pages/authantication/SignUp";
 // import Test from "./Component/Test";
 import Profile from "./pages/Profile/Profile";
 import ChatProvider from "./context.js/chatContext";
-import LandingPage from "./pages/LandingPage/LandingPage";
+import LandingPage from "./pages/landingpage/LandingPage";
 
 function App() {
 
