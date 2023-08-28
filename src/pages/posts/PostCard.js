@@ -6,65 +6,78 @@ const PostCard = ({ posts, fetchPosts }) => {
   const [isCommentInputVisible, setIsCommentInputVisible] = useState(false);
   const [selectedPostId, setSelectedPostId] = useState(false);
   const [commentText, setCommentText] = useState("");
+  const [allcomment, setAllcomment] = useState([]);
 
   const user = JSON.parse(localStorage.getItem("user"));
 
-  const toggleCommentInput = (postId, userId) => {
+  const toggleCommentInput = async (postId, userId) => {
     setIsCommentInputVisible(!isCommentInputVisible);
     if (!isCommentInputVisible) {
+      console.log(postId);
       setCommentText("");
     }
-    setSelectedPostId(postId); // Set the selected postId here if needed
+    setSelectedPostId(postId);
+    try {
+      const response = await api.get(`/comments/getAll/${postId}`, {
+        headers: {
+          Authorization: `Bearer ${user.token}`,
+        },
+      });
+      console.log("comments", response.data.data);
+      setAllcomment(response.data.data);
+    } catch (error) {
+      console.log(error);
+    }
   };
   const handleCommentChange = (event) => {
     setCommentText(event.target.value);
   };
 
-const handlePostComment = async (postId, userId) => {
-       try {
-         console.log("postid", postId);
-         console.log("userid", userId);
-         console.log("text", commentText);
-         const response = await api.post(
-           "/comments/add",
-           {
-             text: commentText,
-             postId: postId,
-             userName: userId,
-           },
-           {
-             headers: {
-               Authorization: `Bearer ${user.token}`,
-             },
-           }
-         );
-                fetchPosts();
-        console.log(response.data);
-         setCommentText("");
-         setIsCommentInputVisible(false);
-       } catch (error) {
-         console.log(error);
-       }
-};
-
-  const handleLikeClick = async (postId, userId) => {
-        try {
-        console.log("postid", postId);
-        console.log("userid", userId);
-      const response = await api.put(
-        "/posts/likes",
+  const handlePostComment = async (postId, userId) => {
+    try {
+      console.log("postid", postId);
+      console.log("userid", userId);
+      console.log("text", commentText);
+      const response = await api.post(
+        "/comments/add",
         {
-            postId: postId,
-            userId: userId,
+          text: commentText,
+          postId: postId,
+          userName: userId,
         },
         {
           headers: {
             Authorization: `Bearer ${user.token}`,
           },
         }
-        
       );
-       fetchPosts();
+      fetchPosts();
+      console.log(response.data);
+      setCommentText("");
+      setIsCommentInputVisible(false);
+    } catch (error) {
+      console.log(error);
+    }
+ 
+  };
+
+  const handleLikeClick = async (postId, userId) => {
+    try {
+      console.log("postid", postId);
+      console.log("userid", userId);
+      const response = await api.put(
+        "/posts/likes",
+        {
+          postId: postId,
+          userId: userId,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${user.token}`,
+          },
+        }
+      );
+      fetchPosts();
       console.log("like", response.data);
     } catch (error) {
       console.log(error);
@@ -141,25 +154,58 @@ const handlePostComment = async (postId, userId) => {
                 </div>
               </div>
               {item._id === selectedPostId && isCommentInputVisible && (
-                <div class="flex px-5 mr-3">
-                  <input
-                    type="text"
-                    placeholder="Write a comment..."
-                    class="flex-grow px-2 py-1 w-full"
-                    value={commentText}
-                    onChange={handleCommentChange}
-                  />
-                  <button class="ml-2 text-blue-500">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="red"
-                      class="w-6 h-6"
-                      onClick={() => handlePostComment(item._id, user._id)}
-                    >
-                      <path d="M3.478 2.405a.75.75 0 00-.926.94l2.432 7.905H13.5a.75.75 0 010 1.5H4.984l-2.432 7.905a.75.75 0 00.926.94 60.519 60.519 0 0018.445-8.986.75.75 0 000-1.218A60.517 60.517 0 003.478 2.405z" />
-                    </svg>
-                  </button>
+                <div>
+                  <div class="flex px-5 mr-3 ">
+                    <input
+                      type="text"
+                      placeholder="Write a comment..."
+                      class="flex-grow px-2 py-1 w-full"
+                      value={commentText}
+                      onChange={handleCommentChange}
+                    />
+                    <button class="ml-2 text-blue-500">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="red"
+                        class="w-6 h-6"
+                        onClick={() => handlePostComment(item._id, user._id)}
+                      >
+                        <path d="M3.478 2.405a.75.75 0 00-.926.94l2.432 7.905H13.5a.75.75 0 010 1.5H4.984l-2.432 7.905a.75.75 0 00.926.94 60.519 60.519 0 0018.445-8.986.75.75 0 000-1.218A60.517 60.517 0 003.478 2.405z" />
+                      </svg>
+                    </button>
+                  </div>
+                  {allcomment
+                    .slice()
+                    .reverse()
+                    .map((item) => (
+                      <div class="text-red-800 mt-5 text-xl">
+                        <h1 className="my-4 ">All comments</h1>
+                        <div className="flex">
+                          <div className="mr-2">
+                            <img
+                              class="inline-block h-4 w-4 rounded-full"
+                              src={
+                                item.commentCreatedBy.image ||
+                                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo4KQ6Z-E4J2GU14fwgWPT1Fn2PCeGQqmFVeWAo9SAK_kKH3VBvJ2XnDgzjCrTZi9rzns&usqp=CAU"
+                              }
+                              alt=""
+                            />
+                          </div>
+                          <p class="text-base  leading-6 font-medium text-black">
+                            {item.commentCreatedBy.username}
+                            <span class="text-smtext-red-800 leading-5 font-large  group-hover:text-gray-300 transition ease-in-out duration-150">
+                              , {new Date(item.createdAt).toLocaleDateString()}
+                            </span>
+                          </p>
+                        </div>
+                        <div>
+                          <p class="text-base ml-7	 width-auto font-small text-black flex-shrink">
+                            {item.commentDescription}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
                 </div>
               )}
               <div class="grid gap-6 mb-6 md:grid-cols-2"></div>
