@@ -55,7 +55,7 @@ const handlePostComment = async (postId, userId) => {
         "/posts/likes",
         {
             postId: postId,
-            userName: userId,
+            userId: userId,
         },
         {
           headers: {
