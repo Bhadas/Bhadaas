@@ -32,7 +32,7 @@ function App() {
             <Route path="/post" element={<Post/>}/>
             {/* <Route path="/test" element={<Test/>}/> */}
             <Route path="/Profile" element={<Profile/>}/>
-            <Route path="/landing" element={<LandingPage/>}/>
+            {/* <Route path="/landing" element={<LandingPage/>}/> */}
           </Routes>
         </ChatProvider>
       </BrowserRouter>
