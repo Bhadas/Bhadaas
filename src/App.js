@@ -1,9 +1,6 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Home from "./pages/home/Home";
 import LiveChat from "./pages/livechat/LiveChat";
-import LeftMenu from "./pages/home/UserList";
-import ChatBox from "./pages/home/ChatBox";
 import Post from "./pages/posts/Post";
 import SingleChat from "./pages/SingleChat/Home"
 import {BrowserRouter, Route,Routes } from "react-router-dom";
@@ -12,7 +9,6 @@ import SignUp from "./pages/authantication/SignUp";
 // import Test from "./Component/Test";
 import Profile from "./pages/Profile/Profile";
 import ChatProvider from "./context.js/chatContext";
-import LandingPage from "../src/pages/LandingPage/LandingPage";
 
 function App() {
 

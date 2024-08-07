@@ -1,6 +1,4 @@
 import React from "react";
-import ChatBox from "../pages/home/ChatBox";
-import ChatInput from "./ChatInput";
 
 export default function ChatHeader(props) {
   return (

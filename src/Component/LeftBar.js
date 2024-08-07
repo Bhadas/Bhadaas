@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 export default function LeftBar() {
-  const [bgColor, setBgClor] = useState(false);
+  // const [bgColor, setBgClor] = useState(false);
   return (
     <div class="top-0 left-0 h-screen bg-blue-950 w-2/12 flex flex-col justify-between border-4 border-gray-100 rounded-xl shadow-lg text-white ">
       <div>
